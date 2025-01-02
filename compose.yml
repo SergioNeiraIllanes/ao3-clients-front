@@ -6,8 +6,9 @@ services:
     container_name: ao3-clients-front
     volumes:
       - .:/app
+      - /app/node_modules
     ports:
       - "3001:3000"
     tty: true
     stdin_open: true
-    # command: /bin/sh -c "npm start" 
+    command: /bin/sh -c "npm start"
