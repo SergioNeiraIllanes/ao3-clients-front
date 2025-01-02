@@ -1,0 +1,13 @@
+services:
+  ao3-clients-front:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile.dev
+    container_name: ao3-clients-front
+    volumes:
+      - .:/app
+    ports:
+      - "3001:3000"
+    tty: true
+    stdin_open: true
+    # command: /bin/sh -c "npm start" 
